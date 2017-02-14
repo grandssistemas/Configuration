@@ -1,0 +1,13 @@
+/fashionmanager-domain/target/
+/fashionmanager-infrastructure/target/
+/fashionmanager-application/target/
+/fashionmanager-gateway/target/
+/fashionmanager-api/target/
+/fashionmanager-api/src/main/java/br/com/codein/seed/Seed.java
+/fashionmanager-presentation/target/
+/.idea/
+/atlassian-ide-plugin.xml
+/fashionmanager.iml
+/**/src/main/resources/rebel.xml
+
+/fashionmanager-application/br.com.codein.fashionmanager.domain.model.*/
