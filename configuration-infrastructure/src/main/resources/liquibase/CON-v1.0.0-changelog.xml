@@ -22,7 +22,7 @@
             </column>
             <column name="oi" type="VARCHAR(255)"/>
             <column name="version" type="INT"/>
-            <column name="seedversion" type="VARCHAR(255)">
+            <column name="seedversion" type="INT">
                 <constraints nullable="false"/>
             </column>
             <column name="type" type="VARCHAR(255)">
@@ -45,7 +45,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="revtype" type="SMALLINT"/>
-            <column name="seedversion" type="VARCHAR(255)"/>
+            <column name="seedversion" type="INT"/>
             <column name="type" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>

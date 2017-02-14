@@ -26,7 +26,7 @@ public class SeedControl extends GumgaModel<Long> implements Serializable {
 
     @NotNull(message = "The seedVersion field can't be null")
     @ApiModelProperty(value = "Versão do seed que a organização está", position = 1, required = true)
-    private String seedVersion;
+    private Integer seedVersion;
 
     @NotNull(message = "The type field can't be null")
     @ApiModelProperty(value = "Tipo da classe que aquela versão é valida", position = 2, required = true)
@@ -36,11 +36,11 @@ public class SeedControl extends GumgaModel<Long> implements Serializable {
     public SeedControl() {
     }
 
-    public String getSeedVersion() {
+    public Integer getSeedVersion() {
         return seedVersion;
     }
 
-    public void setSeedVersion(String seedVersion) {
+    public void setSeedVersion(Integer seedVersion) {
         this.seedVersion = seedVersion;
     }
 
