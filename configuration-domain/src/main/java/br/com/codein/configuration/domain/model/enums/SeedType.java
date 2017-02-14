@@ -6,5 +6,7 @@ package br.com.codein.configuration.domain.model.enums;
  */
 public enum SeedType {
     TESTE,
-    PAYMENT
+    PAYMENT,
+    PERSONGROUP,
+    PRODUCTGROUP
 }

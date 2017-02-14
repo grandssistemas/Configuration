@@ -36,6 +36,11 @@ public class SeedControl extends GumgaModel<Long> implements Serializable {
     public SeedControl() {
     }
 
+    public SeedControl(Integer seedVersion, SeedType type) {
+        this.seedVersion = seedVersion;
+        this.type = type;
+    }
+
     public Integer getSeedVersion() {
         return seedVersion;
     }
