@@ -8,5 +8,8 @@ public enum SeedType {
     TESTE,
     PAYMENT,
     PERSONGROUP,
-    PRODUCTGROUP
+    PRODUCTGROUP,
+    INDIVIDUAL,
+    JURIDICA,
+    ROLE
 }
