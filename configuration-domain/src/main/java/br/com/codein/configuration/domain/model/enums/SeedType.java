@@ -12,5 +12,7 @@ public enum SeedType {
     INDIVIDUAL,
     JURIDICA,
     ROLE,
-    OPERATION
+    OPERATION,
+    CASH_ACCOUNT,
+    PDV
 }
