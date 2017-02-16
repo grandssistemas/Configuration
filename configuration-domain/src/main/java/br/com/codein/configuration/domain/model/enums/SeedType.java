@@ -9,5 +9,8 @@ public enum SeedType {
     PAYMENT,
     PERSONGROUP,
     PRODUCTGROUP,
+    INDIVIDUAL,
+    JURIDICA,
+    ROLE,
     OPERATION
 }
