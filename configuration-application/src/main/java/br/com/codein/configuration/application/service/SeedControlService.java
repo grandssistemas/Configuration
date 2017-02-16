@@ -4,6 +4,7 @@ import br.com.codein.configuration.application.repository.SeedControlRepository;
 import br.com.codein.configuration.domain.model.SeedControl;
 import br.com.codein.configuration.domain.model.enums.SeedType;
 import io.gumga.application.GumgaService;
+import io.gumga.application.service.AbstractGumgaService;
 import io.gumga.core.QueryObject;
 import io.gumga.core.SearchResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,11 @@ public class SeedControlService extends GumgaService<SeedControl, Long> {
             return null;
         }
         return search.getValues().get(0);
+    }
+
+
+    public SearchResult<SeedControl> getAll(){
+        return repository.findAllWithTenancy();
     }
 
 
