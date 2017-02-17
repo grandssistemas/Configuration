@@ -14,5 +14,8 @@ public enum SeedType {
     ROLE,
     OPERATION,
     CASH_ACCOUNT,
-    PDV
+    PDV,
+    TAXATION_GROUP,
+    FORMULA,
+    PRODUCT
 }
