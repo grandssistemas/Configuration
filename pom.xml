@@ -14,6 +14,7 @@
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <hibernate.version>4.3.1.Final</hibernate.version>
+        <mobiagecore.version>4.3.1.Final</mobiagecore.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -73,6 +74,33 @@
                 <groupId>io.gumga</groupId>
                 <artifactId>gumga-application</artifactId>
                 <version>${io.gumga.version}</version>
+            </dependency>
+            <!--MobiAgeCore-->
+            <dependency>
+                <groupId>br.com.codein</groupId>
+                <artifactId>mobiagecore-domain</artifactId>
+                <version>${mobiagecore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.codein</groupId>
+                <artifactId>mobiagecore-application</artifactId>
+                <version>${mobiagecore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.codein</groupId>
+                <artifactId>mobiagecore-api</artifactId>
+                <version>${mobiagecore.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>br.com.codein</groupId>
+                <artifactId>mobiagecore-gateway</artifactId>
+                <version>${mobiagecore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.com.codein</groupId>
+                <artifactId>mobiagecore-integration</artifactId>
+                <version>${mobiagecore.version}</version>
             </dependency>
             <!-- DEPENDENCIAS em geral-->
             <dependency>
