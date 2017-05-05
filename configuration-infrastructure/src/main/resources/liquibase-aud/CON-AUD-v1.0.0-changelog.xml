@@ -1,37 +1,6 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
-
-    <changeSet author="Rafael Mangolin" id="CON-001" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <sequenceExists sequenceName="seq_seedcontrol"/>
-            </not>
-        </preConditions>
-        <createSequence sequenceName="seq_seedcontrol"/>
-    </changeSet>
-
-    <changeSet  author="Rafael Mangolin" id="CON-002" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="seedcontrol"/>
-            </not>
-        </preConditions>
-        <createTable tableName="seedcontrol">
-            <column name="id" type="BIGINT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="oi" type="VARCHAR(255)"/>
-            <column name="version" type="INT"/>
-            <column name="seedversion" type="INT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="type" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
-
-    <changeSet  author="Rafael Mangolin" id="CON-003" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+    <changeSet author="rafael (generated)" id="1493924206514-182">
         <preConditions onFail="MARK_RAN">
             <not>
                 <tableExists tableName="seedcontrol_aud"/>
@@ -49,8 +18,7 @@
             <column name="type" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-
-    <changeSet author="Rafael Mangolin" id="CON-004" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+    <changeSet author="rafael (generated)" id="1493924206514-397">
         <preConditions onFail="MARK_RAN">
             <not>
                 <primaryKeyExists tableName="seedcontrol_aud"/>
@@ -58,20 +26,12 @@
         </preConditions>
         <addPrimaryKey columnNames="id, rev" constraintName="seedcontrol_aud_pkey" tableName="seedcontrol_aud"/>
     </changeSet>
-    <changeSet author="Rafael Mangolin" id="CON-005" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+    <changeSet author="rafael (generated)" id="1493924206514-624">
         <preConditions onFail="MARK_RAN">
             <not>
-                <primaryKeyExists tableName="seedcontrol"/>
+                <foreignKeyConstraintExists foreignKeyName="fk_rnye5f695h2icfdkaak6qrhid"/>
             </not>
         </preConditions>
-        <addPrimaryKey columnNames="id" constraintName="seedcontrol_pkey" tableName="seedcontrol"/>
-    </changeSet>
-    <changeSet author="Rafael Mangolin" id="CON-006" objectQuotingStrategy="QUOTE_ALL_OBJECTS">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <foreignKeyConstraintExists foreignKeyName="fk_seedcontrol_aud_rev"/>
-            </not>
-        </preConditions>
-        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="seedcontrol_aud" constraintName="fk_seedcontrol_aud_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="gumgarevisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="seedcontrol_aud" constraintName="fk_rnye5f695h2icfdkaak6qrhid" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="gumgarevisionentity" referencedTableSchemaName="limpo"/>
     </changeSet>
 </databaseChangeLog>
