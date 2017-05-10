@@ -32,6 +32,6 @@
                 <foreignKeyConstraintExists foreignKeyName="fk_rnye5f695h2icfdkaak6qrhid"/>
             </not>
         </preConditions>
-        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="seedcontrol_aud" constraintName="fk_rnye5f695h2icfdkaak6qrhid" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="gumgarevisionentity" referencedTableSchemaName="limpo"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="seedcontrol_aud" constraintName="fk_rnye5f695h2icfdkaak6qrhid" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="gumgarevisionentity" referencedTableSchemaName="${referenced.name}"/>
     </changeSet>
 </databaseChangeLog>
