@@ -5,7 +5,7 @@
     <groupId>br.com.codein</groupId>
     <artifactId>configuration</artifactId>
     <name>configuration</name>
-    <version>1.0</version>
+    <version>1.0-sghom</version>
 
     <packaging>pom</packaging>
     <properties>
@@ -322,6 +322,13 @@
 
             </plugins>
         </pluginManagement>
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE</version>
+            </extension>
+        </extensions>
     </build>
     <modules>
         <module>configuration-domain</module>
@@ -330,4 +337,40 @@
         <module>configuration-gateway</module>
         <module>configuration-api</module>
     </modules>
+    <distributionManagement>
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>AWS Release Repository</name>
+            <url>s3://repository.mobiage/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>AWS Snapshot Repository</name>
+            <url>s3://repository.mobiage/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>S3 Release Repository for component1</name>
+            <url>s3://repository.mobiage/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>Component1-s3-snapshot-repo</name>
+            <url>s3://repository.mobiage/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
