@@ -18,3 +18,4 @@ configuration.iml
 fashionmanger.xml
 configuration-application/br.com.codein.configuration.domain.model.*/
 configuration-application/br.com.codein.buddyperson.domain.*/
+**/*.xml.*
