@@ -14,7 +14,6 @@
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <hibernate.version>4.3.1.Final</hibernate.version>
-        <mobiagecore.version>4.3.1.Final</mobiagecore.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -276,6 +275,11 @@
                 <artifactId>barbecue</artifactId>
                 <version>1.5-beta1</version>
             </dependency>
+            <dependency>
+                <groupId>com.datacoper</groupId>
+                <artifactId>edoc.integracao.nfce</artifactId>
+                <version>${edoc.integracao.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -330,6 +334,42 @@
             </extension>
         </extensions>
     </build>
+    <profiles>
+        <profile>
+            <id>dev-grands</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
+                <edoc.integracao.version>grands-hom</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod-grands</id>
+            <properties>
+                <mobiagecore.version>LATEST</mobiagecore.version>
+                <edoc.integracao.version>grands-prod</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev-sg</id>
+            <properties>
+                <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
+                <edoc.integracao.version>sg-hom</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod-sg</id>
+            <properties>
+                <mobiagecore.version>LATEST</mobiagecore.version>
+                <edoc.integracao.version>sg-prod</edoc.integracao.version>
+            </properties>
+        </profile>
+    </profiles>
     <modules>
         <module>configuration-domain</module>
         <module>configuration-infrastructure</module>
