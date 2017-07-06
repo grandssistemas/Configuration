@@ -4,7 +4,7 @@
     <parent>
         <groupId>br.com.codein</groupId>
         <artifactId>configuration</artifactId>
-        <version>1.3.0-SNAPSHOT</version>
+        <version>1.3.0</version>
     </parent>
     <artifactId>configuration-gateway</artifactId>
     <name>configuration-gateway</name>
