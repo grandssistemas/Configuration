@@ -5,7 +5,7 @@
     <groupId>br.com.codein</groupId>
     <artifactId>configuration</artifactId>
     <name>configuration</name>
-    <version>1.0</version>
+    <version>1.3.0</version>
 
     <packaging>pom</packaging>
     <properties>
@@ -14,7 +14,6 @@
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <hibernate.version>4.3.1.Final</hibernate.version>
-        <mobiagecore.version>4.3.1.Final</mobiagecore.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -22,27 +21,27 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>configuration-domain</artifactId>
-                <version>1.0</version>
+                <version>1.3.0</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>configuration-infrastructure</artifactId>
-                <version>1.0</version>
+                <version>1.3.0</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>configuration-application</artifactId>
-                <version>1.0</version>
+                <version>1.3.0</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>configuration-gateway</artifactId>
-                <version>1.0</version>
+                <version>1.3.0</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>configuration-api</artifactId>
-                <version>1.0</version>
+                <version>1.3.0</version>
             </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
@@ -276,6 +275,11 @@
                 <artifactId>barbecue</artifactId>
                 <version>1.5-beta1</version>
             </dependency>
+            <dependency>
+                <groupId>com.datacoper</groupId>
+                <artifactId>edoc.integracao.nfce</artifactId>
+                <version>${edoc.integracao.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -322,7 +326,50 @@
 
             </plugins>
         </pluginManagement>
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE</version>
+            </extension>
+        </extensions>
     </build>
+    <profiles>
+        <profile>
+            <id>dev-grands</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
+                <edoc.integracao.version>grands-hom</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod-grands</id>
+            <properties>
+                <mobiagecore.version>LATEST</mobiagecore.version>
+                <edoc.integracao.version>grands-prod</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev-sg</id>
+            <properties>
+                <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
+                <edoc.integracao.version>sg-hom</edoc.integracao.version>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod-sg</id>
+            <properties>
+                <mobiagecore.version>LATEST</mobiagecore.version>
+                <edoc.integracao.version>sg-prod</edoc.integracao.version>
+            </properties>
+        </profile>
+    </profiles>
     <modules>
         <module>configuration-domain</module>
         <module>configuration-infrastructure</module>
@@ -330,4 +377,40 @@
         <module>configuration-gateway</module>
         <module>configuration-api</module>
     </modules>
+    <distributionManagement>
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>AWS Release Repository</name>
+            <url>s3://repository.mobiage/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>AWS Snapshot Repository</name>
+            <url>s3://repository.mobiage/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>maven-s3-release-repo</id>
+            <name>S3 Release Repository for component1</name>
+            <url>s3://repository.mobiage/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>maven-s3-snapshot-repo</id>
+            <name>Component1-s3-snapshot-repo</name>
+            <url>s3://repository.mobiage/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
