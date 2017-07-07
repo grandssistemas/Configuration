@@ -5,4 +5,5 @@
     <include file="classpath:liquibase/mobiagecore-changelog-master.xml"/>
     <include file="CON-v1.0.0-changelog.xml" relativeToChangelogFile="true"/>
     <include file="CON-v1.3.0-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="CON-v1.4.0-changelog.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
