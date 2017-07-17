@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <io.gumga.version>1.5.9</io.gumga.version>
+        <io.gumga.version>1.5.17</io.gumga.version>
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <hibernate.version>4.3.1.Final</hibernate.version>
@@ -305,7 +305,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.12.4</version>
                     <configuration>
-                        <skipTests>true</skipTests>
+                        <skipTests>false</skipTests>
                     </configuration>
                 </plugin>
                 <plugin>
