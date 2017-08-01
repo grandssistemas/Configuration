@@ -17,5 +17,6 @@ public enum SeedType {
     PDV,
     TAXATION_GROUP,
     FORMULA,
-    PRODUCT
+    PRODUCT,
+    BUSINESS_RULE
 }
