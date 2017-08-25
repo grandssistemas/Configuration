@@ -275,11 +275,6 @@
                 <artifactId>barbecue</artifactId>
                 <version>1.5-beta1</version>
             </dependency>
-            <dependency>
-                <groupId>com.datacoper</groupId>
-                <artifactId>edoc.integracao.nfce</artifactId>
-                <version>${edoc.integracao.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -342,7 +337,6 @@
             </activation>
             <properties>
                 <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
-                <edoc.integracao.version>grands-hom</edoc.integracao.version>
             </properties>
         </profile>
 
@@ -350,7 +344,6 @@
             <id>prod-grands</id>
             <properties>
                 <mobiagecore.version>LATEST</mobiagecore.version>
-                <edoc.integracao.version>grands-prod</edoc.integracao.version>
             </properties>
         </profile>
 
@@ -358,7 +351,6 @@
             <id>dev-sg</id>
             <properties>
                 <mobiagecore.version>[0.0-SNAPSHOT,)</mobiagecore.version>
-                <edoc.integracao.version>sg-hom</edoc.integracao.version>
             </properties>
         </profile>
 
@@ -366,7 +358,6 @@
             <id>prod-sg</id>
             <properties>
                 <mobiagecore.version>LATEST</mobiagecore.version>
-                <edoc.integracao.version>sg-prod</edoc.integracao.version>
             </properties>
         </profile>
     </profiles>
