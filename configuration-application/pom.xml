@@ -51,10 +51,6 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>com.datacoper</groupId>
-            <artifactId>edoc.integracao.nfce</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
         </dependency>
