@@ -6,4 +6,5 @@
     <include file="CON-AUD-v1.3.0-changelog.xml" relativeToChangelogFile="true"/>
     <include file="CON-AUD-v1.4.0-changelog.xml" relativeToChangelogFile="true"/>
     <include file="CON-AUD-v1.5.0-changelog.xml" relativeToChangelogFile="true"/>
+    <include file="CON-AUD-v1.6.0-changelog.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

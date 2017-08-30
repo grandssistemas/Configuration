@@ -5,7 +5,7 @@
     <parent>
         <groupId>br.com.codein</groupId>
         <artifactId>configuration</artifactId>
-        <version>1.5.0</version>
+        <version>1.6.0</version>
     </parent>
     <artifactId>configuration-application</artifactId>
     <name>configuration-application</name>
@@ -49,10 +49,6 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.datacoper</groupId>
-            <artifactId>edoc.integracao.nfce</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
