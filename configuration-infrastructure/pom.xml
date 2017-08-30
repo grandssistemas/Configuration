@@ -5,7 +5,7 @@
     <parent>
         <groupId>br.com.codein</groupId>
         <artifactId>configuration</artifactId>
-        <version>1.6.0-SNAPSHOT</version>
+        <version>1.6.0</version>
     </parent>
     <artifactId>configuration-infrastructure</artifactId>
     <name>configuration-infrastructure</name>
