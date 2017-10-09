@@ -81,18 +81,19 @@
                 </executions>
             </plugin>
 
-            <!--<plugin>-->
-            <!--<groupId>br.com.gumga</groupId>-->
-            <!--<artifactId>gumgag</artifactId>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>install</phase>-->
-            <!--<goals>-->
-            <!--<goal>diagrama</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>io.gumga</groupId>
+                <artifactId>gumgag</artifactId>
+                <version>1.3.11</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>diagrama</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
